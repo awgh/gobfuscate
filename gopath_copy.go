@@ -1,4 +1,4 @@
-package main
+package gobfuscate
 
 import (
 	"fmt"
@@ -130,9 +130,8 @@ func createDir(dir string) error {
 	if info, err := os.Stat(dir); err == nil {
 		if info.IsDir() {
 			return nil
-		} else {
-			return fmt.Errorf("file already exists: %s", dir)
 		}
+		return fmt.Errorf("file already exists: %s", dir)
 	}
 	if filepath.Dir(dir) != dir {
 		parent := filepath.Dir(dir)

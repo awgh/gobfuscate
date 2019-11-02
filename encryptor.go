@@ -1,4 +1,4 @@
-package main
+package gobfuscate
 
 import (
 	"crypto/sha256"
